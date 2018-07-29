@@ -1,3 +1,111 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container shadow bg-white rounded">
+  <div class="row d-flex align-items-center">
+    <div class="col-4 padding0">
+      <img src="../assets/images/sb-logo.png" alt="">
+    </div>
+    <div class="col-6">
+      <img src="../assets/images/shoetunes_logo.png" alt="">
+    </div>
+    <div class="col-1">
+      <img src="../assets/images/clear_searches_button.png" alt="">
+    </div>
+    <div class="col-1 padding0">
+      <img src="../assets/images/about_button.png" alt="">
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Artists block -->
+    <div class="col-6">
+      <div class="row d-flex align-items-center py-3 bg-light">
+        <div class="col-6">
+          <strong>Artists</strong>
+        </div>
+        <div class="col-6">
+          <div class="input-group mp-3">
+            <input type="text" class="form-control" id="artistSearchInput" placeholder="Artist Search" />
+            <div class="input-group-append">
+              <button class="btn btn-outline-primary" id="artistSearchButton">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 max-height-200 padding0">
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-action" *ngFor="let song of musicData.songs">{{song.artist}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Songs block -->
+    <div class="col-6">
+      <div class="row d-flex align-items-center py-3 bg-light">
+        <div class="col-6">
+          <strong>Songs</strong>
+        </div>
+        <div class="col-6">
+          <div class="input-group mp-3">
+            <input type="text" class="form-control" id="songSearchInput" placeholder="Song Search" />
+            <div class="input-group-append">
+              <button class="btn btn-outline-primary" id="songSearchButton">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 max-height-200 padding0">
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-action" *ngFor="let song of musicData.songs">{{song.song}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Albums block -->
+    <div class="col-6">
+      <div class="row d-flex align-items-center py-3 bg-light">
+        <div class="col-6">
+          <strong>Albums</strong>
+        </div>
+        <div class="col-6">
+          <div class="input-group mp-3">
+            <input type="text" class="form-control" id="albumSearchInput" placeholder="Album Search" />
+            <div class="input-group-append">
+              <button class="btn btn-outline-primary" id="albumSearchButton">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 max-height-200 padding0">
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-action" *ngFor="let song of musicData.songs">{{song.album}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Music player block -->
+    <div class="col-6">
+      <div class="row">
+        <div class="col-6">
+          <img class="width100" src="../assets/images/purpleRain.jpg" alt="Sorry for changing the image, but I'm more of a Prince fan!">
+        </div>
+        <div class="col-6">
+          <img class="width100" src="../assets/images/ad_window.png" alt="">
+          <img class="width100" src="../assets/images/music_controls.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center text-secondary">
+      <small>Feel free to check out <a href="https://github.com/michaeljscully/musicplayer">the full project</a> on <a href="https://github.com/michaeljscully">my GitHub page</a>.</small>
+    </div>
+  </div>
+</div>
